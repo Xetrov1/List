@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scales=1.0">
+<!--    <meta name="viewport" content="width=device-width, initial-scales=1.0">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
      <title>My Contacts</title>
    
     </head>
@@ -60,12 +60,13 @@
            <a href="#">Chad</a>
         </li>
         <li class="collection-item">
-           <a href="#">Chumonk</a>
+           <a href="#">Cunji</a>
         </li>
         <li class="collection-item">
            <a href="#">Churly</a>  
         </li>
 <!--                   This is arkansas(ark-an-saw) this is kansas, america what is this. I am confusion-->
+                   <!-- i stil really hate these types of comments they are to wirds an make me want to cry-->
         </ul>
      </div>
    </body>
@@ -88,7 +89,10 @@
             for (let i = 0; i < li.length;i++){
                 let a = li[i].getElementsByTagName('a')[0];
                 // if matched
-                if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = '';
+                    
+                } else {
                     li[i].style.display = 'noone';
                 }
             }
