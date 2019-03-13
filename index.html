@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scales=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materalize.css">
+     <title>My Contacts</title>
+   
+    </head>
+
+    <body>
+<div class="container">     
+       <h1 class="center-align">
+           My Contacts
+        </h1> 
+        
+        <input type="text" id="filterInput" placeholder="Search names...">
+               
+               <ul id="names" class="collection with-header">
+        <li class="collection-header">
+                <h5>A</h5>  
+        </li>
+        <li class="collection-item">
+           <a href="#">Abel</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Aleck</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Amon</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Asomi</a>
+        </li>
+        
+                   <li class="collection-header">
+                <h5>B</h5>  
+        </li>
+        <li class="collection-item">
+           <a href="#">Burmon</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Borlock</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Biquth</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Bismoth</a>
+        </li>
+              
+                 <li class="collection-header">
+                <h5>C</h5>  
+        </li>
+        <li class="collection-item">
+           <a href="#">Charlie</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Chad</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Chumonk</a>
+        </li>
+        <li class="collection-item">
+           <a href="#">Churly</a>  
+        </li>
+<!--                   This is arkansas(ark-an-saw) this is kansas, america what is this. I am confusion-->
+        </ul>
+     </div>
+   </body>
+    
+    <script>
+    let filterInput = document.getElementById('filterInput');
+        // add event listner
+        filterInput.addEventListener('keyup',filterNames);
+        
+        function filterNames(){
+            // get avlue of input
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            
+            // get name ul
+            let ul = document.getElementById('names');
+            // get lis from ul
+            let li = ul.querySelectorAll('li.collection-item');
+            
+            // loop through collection
+            for (let i = 0; i < li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+                // if matched
+                if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+                    li[i].style.display = 'noone';
+                }
+            }
+        }
+    </script>
+    
+
+
+
+</html>
